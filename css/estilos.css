@@ -1,3 +1,24 @@
-p {
-    color: aliceblue;
+.dark-mode {
+    background-color:  #212529;
+    color: #fff;
+}
+
+.dark-mode .card {
+    background-color:  #212529;
+    color: #fff;
+}
+
+/* Estilo para el modo claro */
+.light-mode {
+    background-color: #f8f9fa;
+    color: #000;
+}
+
+.light-mode .card {
+    background-color: #fff;
+    color: #000;
+}
+
+#mode-icon{
+    width: 25px;
 }
