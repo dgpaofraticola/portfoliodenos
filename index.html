@@ -4,49 +4,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portolio de nos</title>
+    <title>Portolio de Nos</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="css/estilos.css">
 
 </head>
 
-<body>
+
+<body class="dark-mode">
+
 
     <!-- Barra de Navegación -->
-
-    <nav class="navbar bg-dark border-bottom border-body navbar-expand-lg" data-bs-theme="dark">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">Portfolio de Nos</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Portfolio de Nos</a>
+            <div class="d-flex justify-content-end w-100">
+                <button type="button" class="btn btn-light me-2" onclick="toggleMode()">
+                    <img id="mode-icon" src="img/sol.png" alt="Modo oscuro/claro" />
+                </button>
+                <ul class="navbar-nav d-flex flex-row">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                        <a class="nav-link" aria-current="page" href="index.html">Inicio</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="perfiles.html">Perfiles</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="contacto.html">Contacto</a>
+                        <a class="nav-link active" href="contacto.html">Contacto</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
-    <!--Ahora voy con el contenedor =)-->
 
-    <div class="container-fluid bg-dark py-2 text-center">
-
+    <!-- Título -->
+    <div class="text-center mb-5" py-1>
         <p class="fs-1 fst-italic fw-lighter">Nosotras estamos desarrollando futuro</p>
-
     </div>
 
-    <!--Carrousel con imagenes de nosotras-->
 
+    <!-- Carrousel con imágenes -->
     <div id="carouselExampleIndicators" class="carousel slide">
         <div class="carousel-indicators">
             <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
@@ -57,22 +55,20 @@
                 aria-label="Slide 3"></button>
         </div>
         <div class="carousel-inner">
-            <div class="carousel-item active" style="max-height:600px;">
-                <img src="img/slider01.png" class="d-block w-100"
-                    alt="Lenguajes básicos de programación">
+            <div class="carousel-item active">
+                <img src="img/slider01.png" class="d-block" alt="Lenguajes básicos de programación">
             </div>
-            <div class="carousel-item" style="max-height:600px;">
-                <img src="img/slider02.png" class="d-block w-100" alt="js">
+            <div class="carousel-item">
+                <img src="img/slider02.png" class="d-block" alt="js">
             </div>
-            <div class="carousel-item" style="max-height:600px;">
-                <img src="img/slider03.png" class="d-block w-100"
-                    alt="...">
+            <div class="carousel-item">
+                <img src="img/slider03.png" class="d-block" alt="VUE">
             </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
             data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
+            <span class="visually-hidden">Anterior</span>
         </button>
         <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
             data-bs-slide="next">
@@ -81,24 +77,32 @@
         </button>
     </div>
 
-
-    </div>
-
-
-    <footer>
-        <div class="container-fluid bg-dark py-5 text-center text-warning">
+    <!-- Footer -->
+    <footer class="footer py-4 bg-dark text-light">
+        <div class="container">
             <div class="row">
-                <div class="col">Inicio</div>
-                <div class="col">Perfiles</div>
-                <div class="col">Contacto</div>
-
+                <div class="col-md-6">
+                    <h5>Mapa del Sitio</h5>
+                    <ul class="list-unstyled d-flex flex-row">
+                        <li class="me-3"><a href="index.html" class="text-light">Inicio</a></li>
+                        <li class="me-3"><a href="perfiles.html" class="text-light">Perfiles</a></li>
+                        <li><a href="contacto.html" class="text-light">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p>Desarrollado por Paola y Antonella</p>
+                </div>
             </div>
         </div>
     </footer>
 
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
+
+    <script src="javascript/script.js" defer></script>
+
 </body>
 
 </html>

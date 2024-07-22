@@ -22,3 +22,123 @@
 #mode-icon{
     width: 25px;
 }
+
+html, body {
+    height: 100%;
+}
+
+
+.footer {
+    flex-shrink: 0;
+    background-color: #343a40;
+    color: #ffffff;
+}
+
+.error {
+    color: red;
+    font-size: 0.875em;
+    display: block;
+    margin-top: 0.25em;
+}
+
+
+/* Aplica las variables CSS */
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+.navbar {
+    background-color: var(--navbar-bg);
+}
+
+.footer {
+    background-color: var(--footer-bg);
+}
+
+.btn {
+    background-color: var(--btn-bg);
+    color: var(--btn-text);
+}
+
+
+/* Limitar el tamaño de las imágenes de perfil */
+.profile-img {
+    max-width: 400px; /* Limitar el ancho al 100% del contenedor */
+    max-height: 400px; /* Limitar la altura máxima a 400px */
+    height: auto; /* Mantener la proporción original de la imagen */
+    display: block; /* Asegurar que el elemento se comporta como un bloque */
+    margin: 0 auto; /* Centrar la imagen horizontalmente */
+}
+
+/* Estilos para las tarjetas de perfil */
+
+
+.card-body {
+    padding: 1.5rem; /* Padding para el contenido de la tarjeta */
+}
+
+.card-title {
+    font-size: 1.25rem; /* Tamaño de fuente del título */
+}
+
+.card-text {
+    font-size: 1rem; /* Tamaño de fuente del texto */
+}
+
+/* Centrar las tarjetas en la fila */
+.row {
+    justify-content: center; /* Centra las columnas en la fila */
+}
+
+/* Añadir sombra a las tarjetas */
+.shadow-sm {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra más visible */
+}
+
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.container-fluid {
+    flex: 1;
+}
+
+.carousel-inner {
+    display: flex;
+    /*justify-content: center;*/
+    align-items: center;
+    height: 600px; /* Ajusta la altura según sea necesario */
+    overflow: hidden;
+}
+
+.carousel-item img {
+    max-height: 100%; /* Limita la altura máxima de la imagen */
+    width: auto; /* Mantiene la proporción de la imagen */
+    max-width: 100%;
+}
+
+/* Estilos para el modo oscuro */
+.dark-mode .card {
+    background-color: #343a40; /* Fondo oscuro para la tarjeta */
+    border-color: #495057; /* Borde oscuro para la tarjeta */
+}
+
+.dark-mode .card-body {
+    color: #f8f9fa; /* Color de texto claro */
+}
+
+/* Estilo para el botón del modo */
+#mode-icon {
+    background-color: #ffffff; /* Fondo blanco para el ícono */
+    padding: 5px; /* Añade espacio alrededor del ícono si es necesario */
+    border-radius: 50%; /* Hace el fondo redondeado si el ícono es circular */
+}
+

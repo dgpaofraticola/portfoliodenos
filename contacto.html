@@ -4,83 +4,89 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portolio de nos</title>
+    <title>Portolio de Nos</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="css/estilos.css">
-    <script src="javascript/script.js"></script>
-
+    <script src="javascript/script.js" defer></script>
 </head>
 
 <body class="dark-mode">
 
     <!-- Barra de Navegación -->
-
-    <nav class="navbar bg-dark border-bottom border-body navbar-expand-lg" data-bs-theme="dark">
-        <div class="container-fluid">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
             <a class="navbar-brand" href="index.html">Portfolio de Nos</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
+            <div class="d-flex justify-content-end w-100">
+                <button type="button" class="btn btn-light me-2" onclick="toggleMode()">
+                    <img id="mode-icon" src="img/sol.png" alt="Modo oscuro/claro" />
+                </button>
+                <ul class="navbar-nav d-flex flex-row">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+                        <a class="nav-link" aria-current="page" href="index.html">Inicio</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="perfiles.html">Perfiles</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Contacto</a>
+                        <a class="nav-link active" href="contacto.html">Contacto</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
-    <!--Ahora voy con el contenedor =)-->
-    <div class="container-fluid py-2 text-start">
-        <button type="button" class="btn btn-light" onclick="toggleMode()"><img id="mode-icon" src="img/sol.png"></button>
+
+    <!-- Título -->
+    <div class="container-fluid py-5 text-center">
+        <p class="fs-1 fst-italic fw-lighter mt-2">Trabajemos Juntos =)</p>
     </div>
 
-    <div class="container-fluid py-2 text-center">
-
-        <p class="fs-1 fst-italic fw-lighter">Nosotras estamos desarrollando futuro</p>
-
-    </div>
-
-    <div class="dropdown" data-bs-theme="dark">
-        <!-- Formulario de Contacto -->
-        <section id="contacto" class="container my-5">
-            <div class="row">
-                <div class="col-md-6 mx-auto">
-                    <h2 class="fs-1 fst-italic fw-lighter">Contacto</h2>
-                    <form>
-                        <div class="form-group" div="formulario">
-                            <label for="nombre">Nombre</label>
-                            <input type="text" class="form-control " id="nombre" pattern="[A-Za-záéíóúüñÁÉÍÓÚÜÑ\s]+" oninput="formatoNombre(this)" placeholder="Ingresa tu nombre" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Correo Electrónico</label>
-                            <input type="email" class="form-control" id="email" placeholder="Ingresa tu correo electrónico" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="mensaje">Mensaje</label>
-                            <textarea class="form-control" id="mensaje" rows="3" placeholder="Escribe tu mensaje" required></textarea><br>
-                        </div>
-                        <button type="submit" class="btn btn-light dark-mode">Enviar</button>
-                    </form>
+    <!-- Formulario de Contacto en una Card -->
+    <section id="contacto" class="container ">
+        <div class="row justify-content-center">
+            <div class="col-md-8 col-lg-6">
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <h2 class="fs-3 fst-italic fw-lighter text-center mb-4">Contacto</h2>
+                        <form id="contactForm">
+                            <div class="mb-3">
+                                <label for="nombre" class="form-label">Nombre</label>
+                                <input type="text" class="form-control" id="nombre" placeholder="Ingresa tu nombre" required>
+                                <span id="nombreError" class="error text-danger"></span>
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Correo Electrónico</label>
+                                <input type="email" class="form-control" id="email" placeholder="Ingresa tu correo electrónico" required>
+                                <span id="emailError" class="error text-danger"></span>
+                            </div>
+                            <div class="mb-3">
+                                <label for="mensaje" class="form-label">Mensaje</label>
+                                <textarea class="form-control" id="mensaje" rows="3" placeholder="Escribe tu mensaje" required></textarea>
+                                <span id="mensajeError" class="error text-danger"></span>
+                            </div>
+                            <button type="submit" class="btn btn-light dark-mode">Enviar</button>
+                        </form>
+                    </div>
                 </div>
             </div>
-        </section>
-    </div>
-    <footer>
-        <div class="container-fluid bg-dark py-5 text-center text-warning">
-            <div class="row">
-                <div class="col">Inicio</div>
-                <div class="col">Perfiles</div>
-                <div class="col">Contacto</div>
+        </div>
+    </section>
 
+    <!-- Footer -->
+    <footer class="footer py-4 bg-dark text-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>Mapa del Sitio</h5>
+                    <ul class="list-unstyled d-flex flex-row">
+                        <li class="me-3"><a href="index.html" class="text-light">Inicio</a></li>
+                        <li class="me-3"><a href="perfiles.html" class="text-light">Perfiles</a></li>
+                        <li><a href="contacto.html" class="text-light">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p>Desarrollado por Paola y Antonella</p>
+                </div>
             </div>
         </div>
     </footer>
